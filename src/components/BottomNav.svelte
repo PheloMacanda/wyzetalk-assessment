@@ -1,11 +1,23 @@
 <script>
+    import Icon from "@iconify/svelte";
 </script>
 
 <nav class="bottom-nav">
-    <button>🏠</button>
-    <button>💬</button>
-    <button>👥</button>
-    <button>🔔</button>
+    <button>
+        <Icon icon="mdi-light:home" />
+    </button>
+    <button>
+        <Icon icon="bi:chat-left-text" />
+    </button>
+    <button>
+        <Icon icon="formkit:people" />
+    </button>
+    <button>
+        <Icon icon="f7:chat-bubble-2-fill" />
+    </button>
+    <button>
+        <Icon icon="mdi:bell-outline" />
+    </button>
 </nav>
 
 <style>
