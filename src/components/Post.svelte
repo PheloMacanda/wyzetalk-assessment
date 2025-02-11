@@ -1,20 +1,39 @@
-<script>
-    export let user = "John Smith";
-    export let time = "8 hours ago";
-    export let content =
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    export let image =
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwd29ya2luZyUyMG9uJTIwbGFwdG9wfGVufDB8fDB8fHww";
+<script lang="ts">
+    import type { User } from "../interfaces/types";
+    export let user: User;
+    $: initials = `${user.fullName.split(' ')[0]?.charAt(0)}${user.fullName.split(' ')[1]?.charAt(0)}`;
 </script>
 
 <div class="post">
-    <h3>{user}</h3>
-    <p>{time}</p>
-    <p>{content}</p>
-    <img src={image} alt="Post image" />
+    <div class="name-container">
+        <p class="initials">{initials}</p>
+        <h3>{user.fullName}</h3>
+    </div>
+    
+    <p>{user.time} hours ago</p>
+    <p>{user.content}</p>
+    <!-- svelte-ignore a11y_img_redundant_alt -->
+    <img src={user.image} alt="Post image" />
 </div>
 
 <style>
+
+    .name-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .initials {
+        background-color: #eeebeb;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+    }
+
     .post {
         background: white;
         padding: 10px;
