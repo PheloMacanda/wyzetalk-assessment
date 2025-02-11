@@ -1,22 +1,23 @@
-<script>
+<script lang="ts">
     import Icon from "@iconify/svelte";
 </script>
 
-<nav class="bottom-nav">
+<!-- svelte-ignore a11y_no_redundant_roles -->
+<nav class="bottom-nav" role="navigation">
     <button>
-        <Icon icon="mdi-light:home" />
+        <Icon icon="mdi-light:home" data-testid="icon-home" />
     </button>
     <button>
-        <Icon icon="bi:chat-left-text" />
+        <Icon icon="bi:chat-left-text" data-testid="icon-chat" />
     </button>
     <button>
-        <Icon icon="formkit:people" />
+        <Icon icon="formkit:people" data-testid="icon-people" />
     </button>
     <button>
-        <Icon icon="f7:chat-bubble-2-fill" />
+        <Icon icon="f7:chat-bubble-2-fill" data-testid="icon-bubble" />
     </button>
     <button>
-        <Icon icon="mdi:bell-outline" />
+        <Icon icon="mdi:bell-outline" data-testid="icon-bell" />
     </button>
 </nav>
 
