@@ -11,7 +11,7 @@
     <button on:click={() => navigateTo('/home')}>
         <Icon icon="mdi-light:home" data-testid="icon-home" />
     </button>
-    <button on:click={() => navigateTo('/chat')}>
+    <button on:click={() => navigateTo('/updates')}>
         <Icon icon="bi:chat-left-text" data-testid="icon-chat" />
     </button>
     <button on:click={() => navigateTo('/people')}>
