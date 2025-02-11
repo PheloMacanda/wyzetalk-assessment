@@ -4,7 +4,7 @@
 <nav class="navbar">
     <button class="menu-button">☰</button>
     <h1>Social Feed</h1>
-    <button class="profile-button">⚫</button>
+    <button class="profile-button">{' '}</button>
 </nav>
 
 <style>
@@ -21,7 +21,7 @@
     background: none;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
 }
 </style>
