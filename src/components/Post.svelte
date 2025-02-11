@@ -7,16 +7,32 @@
 <div class="post">
     <div class="name-container">
         <p class="initials">{initials}</p>
-        <h3>{user.fullName}</h3>
+        <div class="name-and-time">
+            <h3 class="full-name">{user.fullName}</h3>
+            <p class="time-content">{user.time} hours ago</p>
+        </div>
     </div>
     
-    <p>{user.time} hours ago</p>
     <p>{user.content}</p>
     <!-- svelte-ignore a11y_img_redundant_alt -->
     <img src={user.image} alt="Post image" />
 </div>
 
 <style>
+
+    .full-name {
+        margin-bottom: 0;
+    }
+    .name-and-time {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time-content {
+        font-size: 14px;
+        color: #8b8888;
+        margin-top: 0;
+    }
 
     .name-container {
         display: flex;
@@ -32,6 +48,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 100%;
+        margin-top: 20px;
     }
 
     .post {
