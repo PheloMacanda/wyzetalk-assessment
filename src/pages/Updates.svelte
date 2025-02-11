@@ -1,13 +1,13 @@
 <script>
     import UpdateCard from "../components/cards/UpdateCard.svelte";
-
-
 </script>
 
-<main>
+<div>
     <UpdateCard />
-</main>
+</div>
 
 <style>
-
+    div {
+        padding: 15px;
+    }
 </style>

@@ -7,6 +7,7 @@
         activeRoute = path;
         window.location.href = path;
     }
+
 </script>
 
 <!-- svelte-ignore a11y_no_redundant_roles -->
@@ -14,16 +15,16 @@
     <button on:click={() => navigateTo('/home')} class="{activeRoute === '/home' ? 'active' : ''}">
         <Icon icon="mdi-light:home" data-testid="icon-home" />
     </button>
-    <button on:click={() => navigateTo('/updates')} class="{activeRoute === '/updates' ? 'active' : ''}">
+    <button on:click={() => navigateTo('/#/updates')} class="{activeRoute === '/#/updates' ? 'active' : ''}">
         <Icon icon="bi:chat-left-text" data-testid="icon-chat" />
     </button>
-    <button on:click={() => navigateTo('/people')} class="{activeRoute === '/people' ? 'active' : ''}">
+    <button on:click={() => navigateTo('/#/people')} class="{activeRoute === '/#/people' ? 'active' : ''}">
         <Icon icon="formkit:people" data-testid="icon-people" />
     </button>
-    <button on:click={() => navigateTo('/chats')} class="{activeRoute === '/chats' ? 'active' : ''}">
+    <button on:click={() => navigateTo('/#/chats')} class="{activeRoute === '/#/chats' ? 'active' : ''}">
         <Icon icon="f7:chat-bubble-2-fill" data-testid="icon-bubble" />
     </button>
-    <button on:click={() => navigateTo('/notifications')} class="{activeRoute === '/notifications' ? 'active' : ''}">
+    <button on:click={() => navigateTo('/#/notifications')} class="{activeRoute === '/#/notifications' ? 'active' : ''}">
         <Icon icon="mdi:bell-outline" data-testid="icon-bell" />
     </button>
 </nav>

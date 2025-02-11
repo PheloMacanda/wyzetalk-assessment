@@ -8,11 +8,10 @@
   import NotFound from "./pages/NotFound.svelte";
 
   const routes = {
-    // Exact path
     '/': Home,
     '/updates': Updates,
     '*': NotFound
-  }
+  };
 
 </script>
 

@@ -53,4 +53,8 @@
         flex-grow: 1;
         margin-left: 10px;
     }
+
+    .details-btn {
+        background-color: #1c1c3c;
+    }
 </style>
