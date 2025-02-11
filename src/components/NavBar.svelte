@@ -14,7 +14,7 @@
     align-items: center;
     background-color: #1c1c3c;
     color: white;
-    padding: 10px 15px;
+    padding: 20px 15px;
 }
 
 .menu-button, .profile-button {
